@@ -3,6 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBProjectTest", "DBProjectTest\DBProjectTest.csproj", "{0B1CD2A0-202C-4791-B583-A2EA9C107205}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondTestProject", "SecondTestProject\SecondTestProject.csproj", "{CF170A67-E704-4392-B2E8-007CD6FB38DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildAndDeployment", "BuildAndDeployment", "{E9EE130A-D8DE-4291-9D47-D787C4E82DD7}"
+	ProjectSection(SolutionItems) = preProject
+		BuildAndDeployment\CIPublish.proj = BuildAndDeployment\CIPublish.proj
+		BuildAndDeployment\publish.proj = BuildAndDeployment\publish.proj
+		BuildAndDeployment\publishDev.proj = BuildAndDeployment\publishDev.proj
+		BuildAndDeployment\publishLocal.proj = BuildAndDeployment\publishLocal.proj
+		BuildAndDeployment\PublishLocal.pubxml = BuildAndDeployment\PublishLocal.pubxml
+		BuildAndDeployment\publishStaging.proj = BuildAndDeployment\publishStaging.proj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +25,10 @@ Global
 		{0B1CD2A0-202C-4791-B583-A2EA9C107205}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B1CD2A0-202C-4791-B583-A2EA9C107205}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B1CD2A0-202C-4791-B583-A2EA9C107205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF170A67-E704-4392-B2E8-007CD6FB38DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF170A67-E704-4392-B2E8-007CD6FB38DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF170A67-E704-4392-B2E8-007CD6FB38DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF170A67-E704-4392-B2E8-007CD6FB38DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
