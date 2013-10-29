@@ -6,18 +6,16 @@
     2. It is used by the publish process during the build of MySite to configure/extend publish
         Note: 1. Is kicked off by the use on the cmd line/build server. 2. Is invoked by this script itself.
               This file is injected into the publish process via the PublishProfile property.
-  -->  
+  -->
   <PropertyGroup>
-    <!--<ApplicationVersion Condition="'$(ApplicationVersion)'==''">0.0.0.*</ApplicationVersion>-->
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">11.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)'=='' ">Release</Configuration>
     <!-- Location for build output of the project -->
     <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\BuildOutput\</OutputRoot>
     <!-- Root for the publish output -->
-    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\temp\BuildAndDeployments\</PublishFolder>
-    
+    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\inetpub\</PublishFolder>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <ProjectsToBuild Include="$(MSBuildThisFileDirectory)..\DBProjectTest\DBProjectTest.csproj">
       <AdditionalProperties>
@@ -29,7 +27,6 @@
         DeployOnBuild=true;
         DeployTarget=WebPublish;
         PublishProfile=$(MSBuildThisFileFullPath)
-        PublishProfile=$(PublishFolder)
       </AdditionalProperties>
     </ProjectsToBuild>
 
@@ -37,16 +34,16 @@
       <AdditionalProperties>
         VisualStudioVersion=$(VisualStudioVersion);
         Configuration=$(Configuration);
-        OutputPath=$(OutputRoot)\SecondTestProject\;
+        OutputPath=$(OutputRoot);
         WebPublishMethod=FileSystem;
-        publishUrl=$(PublishFolder)DBProjectTest\;
+        publishUrl=$(PublishFolder)SecondTestProject\;
         DeployOnBuild=true;
         DeployTarget=WebPublish;
         PublishProfile=$(MSBuildThisFileFullPath)
       </AdditionalProperties>
     </ProjectsToBuild>
   </ItemGroup>
-  
+
   <Target Name="BuildProjects">
     <MSBuild Projects="@(ProjectsToBuild)" />
   </Target>
@@ -61,5 +58,5 @@
   <Target Name="AfterWebPublish" AfterTargets="WebPublish">
     <Message Text="Inside AfterWebPublish" Importance="high"/>
   </Target>
-  
+
 </Project>
