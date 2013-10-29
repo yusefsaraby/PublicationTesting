@@ -12,9 +12,8 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">11.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)'=='' ">Release</Configuration>
     <!-- Location for build output of the project -->
-    <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\BuildOutput\</OutputRoot>
+    <OutputRoot Condition=" '$(OutputRoot)'=='' ">C:\temp\BuildAndDeployments\ApplicationVersion\</OutputRoot>
     <!-- Root for the publish output -->
-    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\temp\BuildAndDeployments\$(ApplicationVersion)\</PublishFolder>
     
   </PropertyGroup>
   
@@ -23,12 +22,7 @@
       <AdditionalProperties>
         VisualStudioVersion=$(VisualStudioVersion);
         Configuration=$(Configuration);
-        OutputPath=$(OutputRoot);
-        WebPublishMethod=FileSystem;
-        publishUrl=$(PublishFolder)DBProjectTest\;
-        DeployOnBuild=true;
-        DeployTarget=WebPublish;
-        PublishProfile=$(MSBuildThisFileFullPath)
+        OutputPath=$(OutputRoot)\DBProjectTest;
       </AdditionalProperties>
     </ProjectsToBuild>
 
@@ -36,12 +30,7 @@
       <AdditionalProperties>
         VisualStudioVersion=$(VisualStudioVersion);
         Configuration=$(Configuration);
-        OutputPath=$(OutputRoot);
-        WebPublishMethod=FileSystem;
-        publishUrl=$(PublishFolder)SecondTestProject\;
-        DeployOnBuild=true;
-        DeployTarget=WebPublish;
-        PublishProfile=$(MSBuildThisFileFullPath)
+        OutputPath=$(OutputRoot)\SecondTestProject\;
       </AdditionalProperties>
     </ProjectsToBuild>
   </ItemGroup>
