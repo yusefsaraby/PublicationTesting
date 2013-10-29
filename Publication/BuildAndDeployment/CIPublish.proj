@@ -14,7 +14,7 @@
     <!-- Location for build output of the project -->
     <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\BuildOutput\</OutputRoot>
     <!-- Root for the publish output -->
-    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\temp\BuildAndDeployment\$(ApplicationVersion)\</PublishFolder>
+    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\temp\BuildAndDeployments\$(ApplicationVersion)\</PublishFolder>
     
   </PropertyGroup>
   
