@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondTestProject", "Second
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildAndDeployment", "BuildAndDeployment", "{E9EE130A-D8DE-4291-9D47-D787C4E82DD7}"
 	ProjectSection(SolutionItems) = preProject
-		BuildAndDeployment\CIPublish.proj = BuildAndDeployment\CIPublish.proj
+		BuildAndDeployment\BuildJob.proj = BuildAndDeployment\BuildJob.proj
 		BuildAndDeployment\publish.proj = BuildAndDeployment\publish.proj
 		BuildAndDeployment\publishDev.proj = BuildAndDeployment\publishDev.proj
 		BuildAndDeployment\publishLocal.proj = BuildAndDeployment\publishLocal.proj
