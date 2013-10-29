@@ -8,11 +8,11 @@
               This file is injected into the publish process via the PublishProfile property.
   -->  
   <PropertyGroup>
-    <ApplicationVersion Condition="'$(ApplicationVersion)'==''">0.0.0.*</ApplicationVersion>
+    <!--<ApplicationVersion Condition="'$(ApplicationVersion)'==''">0.0.0.*</ApplicationVersion>-->
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">11.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)'=='' ">Release</Configuration>
     <!-- Location for build output of the project -->
-    <OutputRoot Condition=" '$(OutputRoot)'=='' ">C:\temp\BuildAndDeployments\ApplicationVersion\</OutputRoot>
+    <OutputRoot Condition=" '$(OutputRoot)'=='' ">C:\temp\BuildAndDeployments\</OutputRoot>
     <!-- Root for the publish output -->
     
   </PropertyGroup>
