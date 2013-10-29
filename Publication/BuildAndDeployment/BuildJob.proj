@@ -13,7 +13,7 @@
     <!-- Location for build output of the project -->
     <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\BuildOutput\</OutputRoot>
     <!-- Root for the publish output -->
-    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\inetpub\</PublishFolder>
+    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\Temp\BuildAndDeployments\</PublishFolder>
   </PropertyGroup>
 
   <ItemGroup>
