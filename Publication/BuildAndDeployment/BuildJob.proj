@@ -8,9 +8,9 @@
               This file is injected into the publish process via the PublishProfile property.
   -->
   <PropertyGroup>
-    <ApplicationVersion Condition=" '$(ApplicationVersion)'=='' ">Temp</ApplicationVersion>
+    <ApplicationVersion Condition=" '$(ApplicationVersion)'=='' ">1.1.1.1</ApplicationVersion>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">11.0</VisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)'=='' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)'=='' ">Release</Configuration>
     <!-- Location for build output of the project -->
     <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\BuildOutput\</OutputRoot>
     <!-- Root for the publish output -->
