@@ -8,12 +8,13 @@
               This file is injected into the publish process via the PublishProfile property.
   -->
   <PropertyGroup>
+    <ApplicationVersion Condition=" '$(ApplicationVersion)'=='' ">Temp</ApplicationVersion>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">11.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)'=='' ">Debug</Configuration>
     <!-- Location for build output of the project -->
     <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\BuildOutput\</OutputRoot>
     <!-- Root for the publish output -->
-    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\inetpub\Staging\</PublishFolder>
+    <PublishFolder Condition=" '$(PublishFolder)'==''">C:\Temp\BuildAndDeployments\$(ApplicationVersion)\</PublishFolder>
   </PropertyGroup>
 
   <ItemGroup>
