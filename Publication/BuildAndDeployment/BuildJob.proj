@@ -27,7 +27,8 @@
         publishUrl=$(PublishFolder)DBProjectTest\;
         DeployOnBuild=true;
         DeployTarget=WebPublish;
-        PublishProfile=$(MSBuildThisFileFullPath)
+        PublishProfile=$(MSBuildThisFileFullPath);
+        Targets=Clean
       </AdditionalProperties>
     </ProjectsToBuild>
 
