@@ -24,7 +24,7 @@ namespace SecondTestProject.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            Console.Write("Make a build5"
+            Console.Write("Make a build5");
             return View();
         }
 
